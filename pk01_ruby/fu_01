@@ -1,0 +1,16 @@
+# Fingerübung 01
+
+# Geben Sie den String 'Das ist Satz Nr. 1' zehn Mal aus, wobei
+# die 1 jedesmal durch die Nummer des aktuellen Durchlaufs ersetzt werden soll.
+
+  # to_do
+
+# Sammeln Sie jede dritte Zahl im Bereich von 0 bis 12 und geben Sie diese
+# komma-separiert aus. Hinter der letzten Zahl soll kein Komma stehen.
+
+  # to_do
+
+# Geben Sie den Inhalt eines Array mit 16 Einträgen aus, wobei immer vier
+# Einträge auf einer Zeile stehen sollen. Nutzen Sie dabei nur each.
+
+  # to_do
