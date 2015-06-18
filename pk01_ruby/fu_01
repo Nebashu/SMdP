@@ -4,17 +4,41 @@
 # die 1 jedesmal durch die Nummer des aktuellen Durchlaufs ersetzt werden soll.
 
   def iteration
-    (1..10).each {|i| print "Das ist der Satz Nr. " + i.to_s + ".\n"}
+    (1..10).each {|i| puts "Das ist der Satz Nr. " + i.to_s + "."}
   end
 
-  iteration
+  # iteration
 
 # Sammeln Sie jede dritte Zahl im Bereich von 0 bis 12 und geben Sie diese
 # komma-separiert aus. Hinter der letzten Zahl soll kein Komma stehen.
 
-  # to_do
+  def iteration_modulo_three
+    (1..12).each do |i|
+      if i % 3 == 0 && !i.eql?(12)
+        print i.to_s + ", "
+      elsif i.eql?(12)
+        print i
+      end
+    end
+  end
+
+  # iteration_modulo_three
 
 # Geben Sie den Inhalt eines Array mit 16 Eintraegen aus, wobei immer vier
 # Eintraege auf einer Zeile stehen sollen. Nutzen Sie dabei nur each.
 
-  # to_do
+  def four_in_a_row
+    count = 0
+
+    (1..16).each do |i|
+      if !count.eql?(4)
+        print i.to_s + " "
+        count += 1
+      elsif count.eql?(4)
+        print "\n"
+        count = 0
+      end
+    end
+  end
+
+  four_in_a_row
