@@ -1,0 +1,7 @@
+# Fingeruebung 03
+
+# Schreiben Sie ein einfaches grep, welches die angegebene Datei öffnet
+# und alle Zeilen, in denen der Suchausdruck vorkommt, ausgibt.
+
+  IO.readlines(ARGV[1]).each_with_index{|line, index| puts "#{index + 1}: #{line}" if line =~ /#{ARGV[0]}/}
+

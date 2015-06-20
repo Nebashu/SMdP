@@ -1,0 +1,36 @@
+# Fingeruebung 02
+
+# Schreiben Sie eine einfache Ruby-Funktion, welche eine zufaellige Zahl
+# auswaehlt. Der Nutzer soll nach seiner Schaetzung gefragt werden (und
+# diese eingeben). Das Programm soll dann mitteilen, ob die Schaetzung zu
+# hoch oder zu niedrig war.
+
+  def generate_random_number
+    num = Random.new
+    rnd_num = num.rand(100)
+  end
+
+  def find_number(rnd_num)
+    found = true
+
+    puts "DEBUG: generate_random_number: " + rnd_num.to_s
+
+    puts "An welche Zahl denken ich gerade (0 bis 100)? "
+
+    while found
+      input = gets.to_i
+
+      puts "Du hast Dich fuer die " + input.to_s + " entschieden."
+
+      if input < rnd_num
+        puts "Deine Schaetzung ist zu niedrig."
+      elsif input > rnd_num
+        puts "Deine Schaetzung ist zu hoch."
+      else
+        puts "Treffer! Ich habe gerade an die " + input.to_s + " gedacht."
+        found = false
+      end
+    end
+  end
+
+  # find_number(generate_random_number)
